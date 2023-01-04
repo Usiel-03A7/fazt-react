@@ -4,23 +4,24 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /**
  * 
- * Funcion que regresa un componente el cual
- * tiene un padre y es retornado para ser usado al llamarlo 
+ * @returns  use the tags fragment or tagEmpty 
  */
 function Gretting() {
+
+  const user = {
+    firstName: 'Usiel',
+    lastName: 'Solano'
+  }
   return (
-     <div>
-       <h1>este es un componente</h1>
-     </div>
+    <> 
+      <h1>mi nombre es: {user.firstName}</h1>
+      <h2>mi apellido es: {user.lastName}</h2>
+    </>
   )
 }
-/**
- * root es la variable principal que se declaro con el DOM.
- * render es una funcion del root para mostrar lo que se ponga
- * dentro del parentesis ---> (here)
- */
+
 root.render(
-  <div>
-    <Gretting/>
-  </div>
+
+  <Gretting />
+
 )
